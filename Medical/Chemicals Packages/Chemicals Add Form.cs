@@ -40,6 +40,7 @@ namespace Medical.Chemicals_Packages
                 dataGridView1.DataSource = ds.Tables["X"];
             }
 
+            dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
 
         private void Chemicals_Add_Form_Load(object sender, EventArgs e)

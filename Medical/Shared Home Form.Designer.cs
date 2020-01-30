@@ -174,19 +174,21 @@
             // اضافةالاصنافToolStripMenuItem
             // 
             this.اضافةالاصنافToolStripMenuItem.Name = "اضافةالاصنافToolStripMenuItem";
-            this.اضافةالاصنافToolStripMenuItem.Size = new System.Drawing.Size(232, 26);
-            this.اضافةالاصنافToolStripMenuItem.Text = "اضافة و تعديل الاصناف";
+            this.اضافةالاصنافToolStripMenuItem.Size = new System.Drawing.Size(250, 26);
+            this.اضافةالاصنافToolStripMenuItem.Text = "اضافة و تعديل المجموعات";
+            this.اضافةالاصنافToolStripMenuItem.Click += new System.EventHandler(this.اضافةالاصنافToolStripMenuItem_Click);
             // 
             // خردالمخازنToolStripMenuItem
             // 
             this.خردالمخازنToolStripMenuItem.Name = "خردالمخازنToolStripMenuItem";
-            this.خردالمخازنToolStripMenuItem.Size = new System.Drawing.Size(232, 26);
-            this.خردالمخازنToolStripMenuItem.Text = "جرد المخازن";
+            this.خردالمخازنToolStripMenuItem.Size = new System.Drawing.Size(250, 26);
+            this.خردالمخازنToolStripMenuItem.Text = "اضافة و تعديل الشركات";
+            this.خردالمخازنToolStripMenuItem.Click += new System.EventHandler(this.خردالمخازنToolStripMenuItem_Click);
             // 
             // تحركاتالمخازنToolStripMenuItem
             // 
             this.تحركاتالمخازنToolStripMenuItem.Name = "تحركاتالمخازنToolStripMenuItem";
-            this.تحركاتالمخازنToolStripMenuItem.Size = new System.Drawing.Size(232, 26);
+            this.تحركاتالمخازنToolStripMenuItem.Size = new System.Drawing.Size(250, 26);
             this.تحركاتالمخازنToolStripMenuItem.Text = "تحركات المخازن";
             // 
             // الخزنةToolStripMenuItem

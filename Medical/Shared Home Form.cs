@@ -1,5 +1,6 @@
 ﻿using Medical.Chemicals_Packages;
 using Medical.Doctor_Packages;
+using Medical.Group_Packages;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -95,6 +96,16 @@ namespace Medical
         private void حركاتالخزنةToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Add_Tab("اضافة و تعديل الكيماويات", new Chemicals_Add_Form());
+        }
+
+        private void اضافةالاصنافToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Add_Tab("اضافة و تعديل المجموعات", new Group_Add_Form());
+        }
+
+        private void خردالمخازنToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Add_Tab("اضافة و تعديل الشركات", new Company_Add_Form());
         }
 
         private void Add_Tab(string Name, Form form)

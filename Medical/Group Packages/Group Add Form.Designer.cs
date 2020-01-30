@@ -30,6 +30,8 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.txt_Name = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel5 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -42,8 +44,6 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txt_SPrice = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel5.SuspendLayout();
@@ -70,12 +70,30 @@
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.txt_SPrice);
+            this.panel3.Controls.Add(this.txt_Name);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Location = new System.Drawing.Point(0, 9);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(650, 560);
             this.panel3.TabIndex = 0;
+            // 
+            // txt_Name
+            // 
+            this.txt_Name.Location = new System.Drawing.Point(123, 272);
+            this.txt_Name.Name = "txt_Name";
+            this.txt_Name.Size = new System.Drawing.Size(196, 20);
+            this.txt_Name.TabIndex = 16;
+            this.txt_Name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.label4.Location = new System.Drawing.Point(371, 264);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(155, 30);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "اسم المجموعة";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dataGridView1
             // 
@@ -91,6 +109,7 @@
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView1.Size = new System.Drawing.Size(647, 470);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // panel5
             // 
@@ -116,6 +135,7 @@
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(404, 20);
             this.textBox6.TabIndex = 20;
+            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // panel6
             // 
@@ -151,6 +171,7 @@
             this.button3.TabIndex = 2;
             this.button3.Text = "الغاء";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // bt_edit
             // 
@@ -164,6 +185,7 @@
             this.bt_edit.TabIndex = 1;
             this.bt_edit.Text = "تعديل";
             this.bt_edit.UseVisualStyleBackColor = false;
+            this.bt_edit.Click += new System.EventHandler(this.bt_edit_Click);
             // 
             // bt_save
             // 
@@ -177,6 +199,7 @@
             this.bt_save.TabIndex = 0;
             this.bt_save.Text = "حفظ";
             this.bt_save.UseVisualStyleBackColor = false;
+            this.bt_save.Click += new System.EventHandler(this.bt_save_Click);
             // 
             // panel7
             // 
@@ -213,24 +236,6 @@
             this.panel2.Size = new System.Drawing.Size(1386, 652);
             this.panel2.TabIndex = 1;
             // 
-            // txt_SPrice
-            // 
-            this.txt_SPrice.Location = new System.Drawing.Point(123, 272);
-            this.txt_SPrice.Name = "txt_SPrice";
-            this.txt_SPrice.Size = new System.Drawing.Size(196, 20);
-            this.txt_SPrice.TabIndex = 16;
-            this.txt_SPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label4
-            // 
-            this.label4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(371, 264);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(155, 30);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "اسم المجموعة";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // Group_Add_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -241,6 +246,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Group_Add_Form";
             this.Text = "Group_Add_Form";
+            this.Load += new System.EventHandler(this.Group_Add_Form_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -272,7 +278,7 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox txt_SPrice;
+        private System.Windows.Forms.TextBox txt_Name;
         private System.Windows.Forms.Label label4;
     }
 }
