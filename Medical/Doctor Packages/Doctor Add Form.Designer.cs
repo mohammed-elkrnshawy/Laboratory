@@ -41,12 +41,12 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.txtCode = new System.Windows.Forms.TextBox();
+            this.txt_Clinic = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtQuantity = new System.Windows.Forms.TextBox();
+            this.txt_Phone = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txt_SPrice = new System.Windows.Forms.TextBox();
-            this.txt_Price = new System.Windows.Forms.TextBox();
+            this.txt_Address = new System.Windows.Forms.TextBox();
+            this.txt_special = new System.Windows.Forms.TextBox();
             this.txt_Name = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -110,6 +110,7 @@
             this.button3.TabIndex = 2;
             this.button3.Text = "الغاء";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // bt_edit
             // 
@@ -123,6 +124,7 @@
             this.bt_edit.TabIndex = 1;
             this.bt_edit.Text = "تعديل";
             this.bt_edit.UseVisualStyleBackColor = false;
+            this.bt_edit.Click += new System.EventHandler(this.bt_edit_Click);
             // 
             // bt_save
             // 
@@ -136,6 +138,7 @@
             this.bt_save.TabIndex = 0;
             this.bt_save.Text = "حفظ";
             this.bt_save.UseVisualStyleBackColor = false;
+            this.bt_save.Click += new System.EventHandler(this.bt_save_Click);
             // 
             // panel4
             // 
@@ -175,6 +178,7 @@
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(404, 20);
             this.textBox6.TabIndex = 20;
+            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // panel5
             // 
@@ -198,18 +202,19 @@
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView1.Size = new System.Drawing.Size(647, 470);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // panel3
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.txtCode);
+            this.panel3.Controls.Add(this.txt_Clinic);
             this.panel3.Controls.Add(this.label5);
-            this.panel3.Controls.Add(this.txtQuantity);
+            this.panel3.Controls.Add(this.txt_Phone);
             this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.txt_SPrice);
-            this.panel3.Controls.Add(this.txt_Price);
+            this.panel3.Controls.Add(this.txt_Address);
+            this.panel3.Controls.Add(this.txt_special);
             this.panel3.Controls.Add(this.txt_Name);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.label3);
@@ -219,13 +224,13 @@
             this.panel3.Size = new System.Drawing.Size(650, 560);
             this.panel3.TabIndex = 0;
             // 
-            // txtCode
+            // txt_Clinic
             // 
-            this.txtCode.Location = new System.Drawing.Point(123, 356);
-            this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(196, 20);
-            this.txtCode.TabIndex = 20;
-            this.txtCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_Clinic.Location = new System.Drawing.Point(123, 356);
+            this.txt_Clinic.Name = "txt_Clinic";
+            this.txt_Clinic.Size = new System.Drawing.Size(196, 20);
+            this.txt_Clinic.TabIndex = 20;
+            this.txt_Clinic.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label5
             // 
@@ -237,13 +242,13 @@
             this.label5.Text = "تليفون العيادة";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txtQuantity
+            // txt_Phone
             // 
-            this.txtQuantity.Location = new System.Drawing.Point(123, 312);
-            this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.Size = new System.Drawing.Size(196, 20);
-            this.txtQuantity.TabIndex = 18;
-            this.txtQuantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_Phone.Location = new System.Drawing.Point(123, 312);
+            this.txt_Phone.Name = "txt_Phone";
+            this.txt_Phone.Size = new System.Drawing.Size(196, 20);
+            this.txt_Phone.TabIndex = 18;
+            this.txt_Phone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label6
             // 
@@ -255,21 +260,21 @@
             this.label6.Text = "تليفون المحمول";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txt_SPrice
+            // txt_Address
             // 
-            this.txt_SPrice.Location = new System.Drawing.Point(123, 269);
-            this.txt_SPrice.Name = "txt_SPrice";
-            this.txt_SPrice.Size = new System.Drawing.Size(196, 20);
-            this.txt_SPrice.TabIndex = 14;
-            this.txt_SPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_Address.Location = new System.Drawing.Point(123, 269);
+            this.txt_Address.Name = "txt_Address";
+            this.txt_Address.Size = new System.Drawing.Size(196, 20);
+            this.txt_Address.TabIndex = 14;
+            this.txt_Address.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // txt_Price
+            // txt_special
             // 
-            this.txt_Price.Location = new System.Drawing.Point(123, 225);
-            this.txt_Price.Name = "txt_Price";
-            this.txt_Price.Size = new System.Drawing.Size(196, 20);
-            this.txt_Price.TabIndex = 13;
-            this.txt_Price.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_special.Location = new System.Drawing.Point(123, 225);
+            this.txt_special.Name = "txt_special";
+            this.txt_special.Size = new System.Drawing.Size(196, 20);
+            this.txt_special.TabIndex = 13;
+            this.txt_special.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txt_Name
             // 
@@ -329,6 +334,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Doctor_Add_Form";
             this.Text = "Doctor_Add_Form";
+            this.Load += new System.EventHandler(this.Doctor_Add_Form_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
@@ -359,12 +365,12 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox txtCode;
+        private System.Windows.Forms.TextBox txt_Clinic;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtQuantity;
+        private System.Windows.Forms.TextBox txt_Phone;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txt_SPrice;
-        private System.Windows.Forms.TextBox txt_Price;
+        private System.Windows.Forms.TextBox txt_Address;
+        private System.Windows.Forms.TextBox txt_special;
         private System.Windows.Forms.TextBox txt_Name;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
