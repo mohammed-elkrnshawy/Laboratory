@@ -1,6 +1,7 @@
 ﻿using Medical.Chemicals_Packages;
 using Medical.Doctor_Packages;
 using Medical.Group_Packages;
+using Medical.Medical_Tests_Packages;
 using Medical.Patient;
 using Medical.Patient_Company;
 using System;
@@ -118,6 +119,11 @@ namespace Medical
         private void اضافةوتعديلمريضToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Add_Tab("اضافة و تعديل المرضى", new Patient_Company_Add_Form());
+        }
+
+        private void اضافةفتراتالعمرToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Add_Tab("اضافة و تعديل فنرات الاعمار", new Age_Periods_Add_Form());
         }
 
         private void Add_Tab(string Name, Form form)

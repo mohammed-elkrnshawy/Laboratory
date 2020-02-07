@@ -59,6 +59,9 @@
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.التحاليلToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.اضافةفتراتالعمرToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.اضافةوتعديلالتحاليلToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -73,6 +76,7 @@
             this.الموردينToolStripMenuItem,
             this.الاصنافوالمخازنToolStripMenuItem,
             this.الخزنةToolStripMenuItem,
+            this.التحاليلToolStripMenuItem,
             this.المصروفاتToolStripMenuItem,
             this.النسخالاحتياطىToolStripMenuItem,
             this.النسخالاحتياطىToolStripMenuItem1});
@@ -329,6 +333,29 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "الرئيسية";
             // 
+            // التحاليلToolStripMenuItem
+            // 
+            this.التحاليلToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.اضافةفتراتالعمرToolStripMenuItem,
+            this.اضافةوتعديلالتحاليلToolStripMenuItem});
+            this.التحاليلToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.التحاليلToolStripMenuItem.Name = "التحاليلToolStripMenuItem";
+            this.التحاليلToolStripMenuItem.Size = new System.Drawing.Size(70, 25);
+            this.التحاليلToolStripMenuItem.Text = "التحاليل";
+            // 
+            // اضافةفتراتالعمرToolStripMenuItem
+            // 
+            this.اضافةفتراتالعمرToolStripMenuItem.Name = "اضافةفتراتالعمرToolStripMenuItem";
+            this.اضافةفتراتالعمرToolStripMenuItem.Size = new System.Drawing.Size(226, 26);
+            this.اضافةفتراتالعمرToolStripMenuItem.Text = "اضافة فترات العمر";
+            this.اضافةفتراتالعمرToolStripMenuItem.Click += new System.EventHandler(this.اضافةفتراتالعمرToolStripMenuItem_Click);
+            // 
+            // اضافةوتعديلالتحاليلToolStripMenuItem
+            // 
+            this.اضافةوتعديلالتحاليلToolStripMenuItem.Name = "اضافةوتعديلالتحاليلToolStripMenuItem";
+            this.اضافةوتعديلالتحاليلToolStripMenuItem.Size = new System.Drawing.Size(226, 26);
+            this.اضافةوتعديلالتحاليلToolStripMenuItem.Text = "اضافة و تعديل التحاليل";
+            // 
             // Shared_Home_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -387,6 +414,9 @@
         private System.Windows.Forms.ToolStripMenuItem اضافةوتعديلمريضToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem حسابطبيبToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem حسابالشركةToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem التحاليلToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem اضافةفتراتالعمرToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem اضافةوتعديلالتحاليلToolStripMenuItem;
     }
 }
 
