@@ -2,6 +2,7 @@
 using Medical.Doctor_Packages;
 using Medical.Group_Packages;
 using Medical.Patient;
+using Medical.Patient_Company;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -112,6 +113,11 @@ namespace Medical
         private void اضافةوتعديلمريضToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Add_Tab("اضافة و تعديل المرضى", new Patient_Add_Form());
+        }
+
+        private void اضافةوتعديلمريضToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Add_Tab("اضافة و تعديل المرضى", new Patient_Company_Add_Form());
         }
 
         private void Add_Tab(string Name, Form form)

@@ -122,6 +122,7 @@
             this.اضافةوتعديلمريضToolStripMenuItem1.Name = "اضافةوتعديلمريضToolStripMenuItem1";
             this.اضافةوتعديلمريضToolStripMenuItem1.Size = new System.Drawing.Size(221, 26);
             this.اضافةوتعديلمريضToolStripMenuItem1.Text = "اضافة و تعديل مريض";
+            this.اضافةوتعديلمريضToolStripMenuItem1.Click += new System.EventHandler(this.اضافةوتعديلمريضToolStripMenuItem1_Click);
             // 
             // الموردينToolStripMenuItem
             // 

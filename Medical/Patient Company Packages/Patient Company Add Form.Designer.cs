@@ -40,15 +40,15 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_Number = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.radio_Male = new System.Windows.Forms.RadioButton();
+            this.radio_Female = new System.Windows.Forms.RadioButton();
+            this.combo_Company = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.txt_SPrice = new System.Windows.Forms.TextBox();
-            this.txt_Price = new System.Windows.Forms.TextBox();
+            this.txt_Age = new System.Windows.Forms.TextBox();
+            this.txt_Phone = new System.Windows.Forms.TextBox();
             this.txt_Name = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -103,6 +103,7 @@
             this.button3.TabIndex = 2;
             this.button3.Text = "الغاء";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // bt_edit
             // 
@@ -116,6 +117,7 @@
             this.bt_edit.TabIndex = 1;
             this.bt_edit.Text = "تعديل";
             this.bt_edit.UseVisualStyleBackColor = false;
+            this.bt_edit.Click += new System.EventHandler(this.bt_edit_Click);
             // 
             // bt_save
             // 
@@ -126,9 +128,10 @@
             this.bt_save.Location = new System.Drawing.Point(85, 12);
             this.bt_save.Name = "bt_save";
             this.bt_save.Size = new System.Drawing.Size(81, 39);
-            this.bt_save.TabIndex = 0;
+            this.bt_save.TabIndex = 8;
             this.bt_save.Text = "حفظ";
             this.bt_save.UseVisualStyleBackColor = false;
+            this.bt_save.Click += new System.EventHandler(this.bt_save_Click);
             // 
             // panel4
             // 
@@ -168,6 +171,7 @@
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(404, 20);
             this.textBox6.TabIndex = 20;
+            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // panel5
             // 
@@ -191,21 +195,22 @@
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView1.Size = new System.Drawing.Size(647, 470);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // panel3
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.txt_Number);
             this.panel3.Controls.Add(this.label5);
-            this.panel3.Controls.Add(this.radioButton2);
-            this.panel3.Controls.Add(this.radioButton1);
-            this.panel3.Controls.Add(this.comboBox1);
+            this.panel3.Controls.Add(this.radio_Male);
+            this.panel3.Controls.Add(this.radio_Female);
+            this.panel3.Controls.Add(this.combo_Company);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.txt_SPrice);
-            this.panel3.Controls.Add(this.txt_Price);
+            this.panel3.Controls.Add(this.txt_Age);
+            this.panel3.Controls.Add(this.txt_Phone);
             this.panel3.Controls.Add(this.txt_Name);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.label3);
@@ -215,13 +220,14 @@
             this.panel3.Size = new System.Drawing.Size(650, 560);
             this.panel3.TabIndex = 0;
             // 
-            // textBox1
+            // txt_Number
             // 
-            this.textBox1.Location = new System.Drawing.Point(117, 249);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(196, 20);
-            this.textBox1.TabIndex = 71;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_Number.Location = new System.Drawing.Point(117, 249);
+            this.txt_Number.Name = "txt_Number";
+            this.txt_Number.Size = new System.Drawing.Size(196, 20);
+            this.txt_Number.TabIndex = 3;
+            this.txt_Number.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_Number.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Number_KeyPress);
             // 
             // label5
             // 
@@ -233,39 +239,40 @@
             this.label5.Text = "رقم بطاقة العلاج";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // radioButton2
+            // radio_Male
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Checked = true;
-            this.radioButton2.Location = new System.Drawing.Point(215, 381);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.radioButton2.Size = new System.Drawing.Size(40, 17);
-            this.radioButton2.TabIndex = 69;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "ذكر";
-            this.radioButton2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radio_Male.AutoSize = true;
+            this.radio_Male.Checked = true;
+            this.radio_Male.Location = new System.Drawing.Point(215, 381);
+            this.radio_Male.Name = "radio_Male";
+            this.radio_Male.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.radio_Male.Size = new System.Drawing.Size(40, 17);
+            this.radio_Male.TabIndex = 6;
+            this.radio_Male.TabStop = true;
+            this.radio_Male.Text = "ذكر";
+            this.radio_Male.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.radio_Male.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // radio_Female
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(151, 381);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.radioButton1.Size = new System.Drawing.Size(46, 17);
-            this.radioButton1.TabIndex = 68;
-            this.radioButton1.Text = "انثى";
-            this.radioButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radio_Female.AutoSize = true;
+            this.radio_Female.Location = new System.Drawing.Point(151, 381);
+            this.radio_Female.Name = "radio_Female";
+            this.radio_Female.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.radio_Female.Size = new System.Drawing.Size(46, 17);
+            this.radio_Female.TabIndex = 7;
+            this.radio_Female.Text = "انثى";
+            this.radio_Female.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.radio_Female.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // combo_Company
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(117, 164);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(196, 21);
-            this.comboBox1.TabIndex = 67;
+            this.combo_Company.FormattingEnabled = true;
+            this.combo_Company.Location = new System.Drawing.Point(117, 164);
+            this.combo_Company.Name = "combo_Company";
+            this.combo_Company.Size = new System.Drawing.Size(196, 21);
+            this.combo_Company.TabIndex = 1;
+            this.combo_Company.SelectedIndexChanged += new System.EventHandler(this.combo_Company_SelectedIndexChanged);
             // 
             // label7
             // 
@@ -287,28 +294,30 @@
             this.label6.Text = "النوع";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txt_SPrice
+            // txt_Age
             // 
-            this.txt_SPrice.Location = new System.Drawing.Point(117, 337);
-            this.txt_SPrice.Name = "txt_SPrice";
-            this.txt_SPrice.Size = new System.Drawing.Size(196, 20);
-            this.txt_SPrice.TabIndex = 64;
-            this.txt_SPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_Age.Location = new System.Drawing.Point(117, 337);
+            this.txt_Age.Name = "txt_Age";
+            this.txt_Age.Size = new System.Drawing.Size(196, 20);
+            this.txt_Age.TabIndex = 5;
+            this.txt_Age.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_Age.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Age_KeyPress);
             // 
-            // txt_Price
+            // txt_Phone
             // 
-            this.txt_Price.Location = new System.Drawing.Point(117, 293);
-            this.txt_Price.Name = "txt_Price";
-            this.txt_Price.Size = new System.Drawing.Size(196, 20);
-            this.txt_Price.TabIndex = 63;
-            this.txt_Price.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_Phone.Location = new System.Drawing.Point(117, 293);
+            this.txt_Phone.Name = "txt_Phone";
+            this.txt_Phone.Size = new System.Drawing.Size(196, 20);
+            this.txt_Phone.TabIndex = 4;
+            this.txt_Phone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_Phone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Phone_KeyPress);
             // 
             // txt_Name
             // 
             this.txt_Name.Location = new System.Drawing.Point(117, 206);
             this.txt_Name.Name = "txt_Name";
             this.txt_Name.Size = new System.Drawing.Size(196, 20);
-            this.txt_Name.TabIndex = 62;
+            this.txt_Name.TabIndex = 2;
             this.txt_Name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label4
@@ -345,7 +354,6 @@
             // 
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1386, 680);
@@ -354,7 +362,7 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(41, 9);
+            this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(1386, 34);
             this.label1.TabIndex = 0;
@@ -371,6 +379,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Patient_Company_Add_Form";
             this.Text = "Patient_Company_Add_Form";
+            this.Load += new System.EventHandler(this.Patient_Company_Add_Form_Load);
             this.panel2.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -401,15 +410,15 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_Number;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.RadioButton radio_Male;
+        private System.Windows.Forms.RadioButton radio_Female;
+        private System.Windows.Forms.ComboBox combo_Company;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txt_SPrice;
-        private System.Windows.Forms.TextBox txt_Price;
+        private System.Windows.Forms.TextBox txt_Age;
+        private System.Windows.Forms.TextBox txt_Phone;
         private System.Windows.Forms.TextBox txt_Name;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
