@@ -126,6 +126,11 @@ namespace Medical
             Add_Tab("اضافة و تعديل فنرات الاعمار", new Age_Periods_Add_Form());
         }
 
+        private void اضافةوتعديلالتحاليلToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Add_Tab("اضافة و تعديل التحاليل", new Normals_Add_Form());
+        }
+
         private void Add_Tab(string Name, Form form)
         {
             TabPage tp = new TabPage(Name);

@@ -78,6 +78,12 @@
     <Compile Include="Medical Tests Packages\Age Periods Add Form.Designer.cs">
       <DependentUpon>Age Periods Add Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Medical Tests Packages\Normals Add Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Medical Tests Packages\Normals Add Form.Designer.cs">
+      <DependentUpon>Normals Add Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Patient Company Packages\Patient Company Add Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Medical Tests Packages\Age Periods Add Form.resx">
       <DependentUpon>Age Periods Add Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Medical Tests Packages\Normals Add Form.resx">
+      <DependentUpon>Normals Add Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Patient Company Packages\Patient Company Add Form.resx">
       <DependentUpon>Patient Company Add Form.cs</DependentUpon>

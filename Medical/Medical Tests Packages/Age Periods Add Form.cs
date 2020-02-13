@@ -76,7 +76,6 @@ namespace Medical.Medical_Tests_Packages
 
             MessageBox.Show(SharedClass.Successful_Message);
         }
-
         private void bt_edit_Click(object sender, EventArgs e)
         {
             if (SharedClass.ValidText(txt_Name) && SharedClass.ValidText(txt_Start) && SharedClass.ValidText(txt_End))
