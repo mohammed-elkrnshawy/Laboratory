@@ -106,6 +106,7 @@
             this.button3.TabIndex = 2;
             this.button3.Text = "الغاء";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // bt_edit
             // 
@@ -119,6 +120,7 @@
             this.bt_edit.TabIndex = 1;
             this.bt_edit.Text = "تعديل";
             this.bt_edit.UseVisualStyleBackColor = false;
+            this.bt_edit.Click += new System.EventHandler(this.bt_edit_Click);
             // 
             // bt_save
             // 
@@ -176,6 +178,7 @@
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dataGridView1.Size = new System.Drawing.Size(647, 470);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // panel3
             // 

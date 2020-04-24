@@ -92,7 +92,7 @@ namespace Medical.Group_Packages
         private void SaveData()
         {
             Ezzat.ExecutedNoneQuery("Company_Insert",
-                    new SqlParameter("@Comoany_Name", txt_Name.Text),
+                    new SqlParameter("@Company_Name", txt_Name.Text),
                     new SqlParameter("@Company_Adress", txt_Adress.Text),
                     new SqlParameter("@Company_Phone", txt_Phone.Text),
                     new SqlParameter("@Company_Money", double.Parse(txt_Money.Text)),
@@ -113,7 +113,7 @@ namespace Medical.Group_Packages
 
         private void textBox6_TextChanged(object sender, EventArgs e)
         {
-            using (ds = Ezzat.GetDataSet("Company_Select_All_Search", "X", new SqlParameter("@Comoany_Name", textBox6.Text)))
+            using (ds = Ezzat.GetDataSet("Company_Select_All_Search", "X", new SqlParameter("@Company_Name", textBox6.Text)))
             {
                 dataGridView1.DataSource = ds.Tables["X"];
             }
@@ -169,7 +169,7 @@ namespace Medical.Group_Packages
         {
 
             Ezzat.ExecutedNoneQuery("Company_Edit",
-                    new SqlParameter("@Comoany_Name", txt_Name.Text),
+                    new SqlParameter("@Company_Name", txt_Name.Text),
                     new SqlParameter("@Company_Adress", txt_Adress.Text),
                     new SqlParameter("@Company_Phone", txt_Phone.Text),
                     new SqlParameter("@Company_ID", Company_ID),
