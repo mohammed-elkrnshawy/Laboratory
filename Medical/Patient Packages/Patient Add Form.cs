@@ -120,7 +120,7 @@ namespace Medical.Patient
                     txt_Name.Text = dataReader["Patient_Name"].ToString();
                     txt_Phone.Text = dataReader["Patient_Phone"].ToString();
                     txt_Age.Text = dataReader["Patient_Age"].ToString();
-                    int value = (int)dataReader["Patient_Doctor_ID"];
+                    int value = (int)dataReader["Doctor_ID"];
                     combo_Doctor.SelectedValue = value;
                     bool bo = (bool)dataReader["Patient_Gender"];
                     radio_Male.Checked = bo;

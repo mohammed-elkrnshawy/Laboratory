@@ -24,6 +24,7 @@ namespace Medical.Medical_Tests_Packages
         private void RefForm()
         {
             txt_Name.Text = "";
+            txt_Unit.Text = "";
 
             bt_save.Enabled = true;
             bt_edit.Enabled = false;
@@ -50,7 +51,7 @@ namespace Medical.Medical_Tests_Packages
             }
             con.Close();
 
-            using (ds = Ezzat.GetDataSet("Test_Select_All", "X"))
+            using (ds = Ezzat.GetDataSet("Analysis_Select_All", "X"))
             {
                 dataGridView1.DataSource = ds.Tables["X"];
             }
@@ -71,14 +72,15 @@ namespace Medical.Medical_Tests_Packages
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             Test_ID = (int)dataGridView1.CurrentRow.Cells[0].Value;
-            ShowDetails(Test_ID,dataGridView1.CurrentRow.Cells[1].Value.ToString());
+            ShowDetails(Test_ID,dataGridView1.CurrentRow.Cells[1].Value.ToString(), dataGridView1.CurrentRow.Cells[2].Value.ToString());
         }
-        private void ShowDetails(int test_ID, string test_Name)
+        private void ShowDetails(int test_ID, string test_Name,string test_Unit)
         {
             bt_save.Enabled = false;
             bt_edit.Enabled = true;
 
             txt_Name.Text = test_Name;
+            txt_Unit.Text = test_Unit;
 
             dataGridView2.Rows.Clear();
 
@@ -113,7 +115,7 @@ namespace Medical.Medical_Tests_Packages
         }
         private void SaveData()
         {
-            object obj = Ezzat.ExecutedScalar("Test_Insert", new SqlParameter("@Test_Name", txt_Name.Text));
+            object obj = Ezzat.ExecutedScalar("Analysis_Insert", new SqlParameter("@Analysis_Name", txt_Name.Text), new SqlParameter("@Analysis_Unit", txt_Unit.Text));
             Test_ID = int.Parse(obj + "");
 
             foreach (DataGridViewRow item in dataGridView2.Rows)
@@ -153,7 +155,12 @@ namespace Medical.Medical_Tests_Packages
         }
         private void EditData()
         {
-            Ezzat.ExecutedNoneQuery("Test_Edit", new SqlParameter("@Test_ID", Test_ID), new SqlParameter("@Test_Name", txt_Name.Text));
+            Ezzat.ExecutedNoneQuery("Analysis_Edit",
+                        new SqlParameter("@Analysis_ID", Test_ID), 
+                        new SqlParameter("@Analysis_Name", txt_Name.Text),
+                        new SqlParameter("@Analysis_Unit", txt_Unit.Text)
+                );
+
             Ezzat.ExecutedNoneQuery("Normal_Delete", new SqlParameter("@Test_ID", Test_ID));
 
             foreach (DataGridViewRow item in dataGridView2.Rows)

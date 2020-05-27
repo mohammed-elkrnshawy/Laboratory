@@ -62,6 +62,7 @@
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.عملكسفToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -100,7 +101,8 @@
             // اضافةسيارةعميلToolStripMenuItem
             // 
             this.اضافةسيارةعميلToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.اضافةوتعديلمريضToolStripMenuItem});
+            this.اضافةوتعديلمريضToolStripMenuItem,
+            this.عملكسفToolStripMenuItem});
             this.اضافةسيارةعميلToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.اضافةسيارةعميلToolStripMenuItem.Name = "اضافةسيارةعميلToolStripMenuItem";
             this.اضافةسيارةعميلToolStripMenuItem.Size = new System.Drawing.Size(191, 26);
@@ -357,6 +359,13 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "الرئيسية";
             // 
+            // عملكسفToolStripMenuItem
+            // 
+            this.عملكسفToolStripMenuItem.Name = "عملكسفToolStripMenuItem";
+            this.عملكسفToolStripMenuItem.Size = new System.Drawing.Size(221, 26);
+            this.عملكسفToolStripMenuItem.Text = "عمل كشف";
+            this.عملكسفToolStripMenuItem.Click += new System.EventHandler(this.عملكسفToolStripMenuItem_Click);
+            // 
             // Shared_Home_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -418,6 +427,7 @@
         private System.Windows.Forms.ToolStripMenuItem التحاليلToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem اضافةفتراتالعمرToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem اضافةوتعديلالتحاليلToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem عملكسفToolStripMenuItem;
     }
 }
 

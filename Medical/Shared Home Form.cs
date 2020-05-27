@@ -4,6 +4,7 @@ using Medical.Group_Packages;
 using Medical.Medical_Tests_Packages;
 using Medical.Patient;
 using Medical.Patient_Company;
+using Medical.Patient_Packages;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -129,6 +130,11 @@ namespace Medical
         private void اضافةوتعديلالتحاليلToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Add_Tab("اضافة و تعديل التحاليل", new Normals_Add_Form());
+        }
+
+        private void عملكسفToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Add_Tab("عمل كشف", new Patient_Analysis_Form());
         }
 
         private void Add_Tab(string Name, Form form)

@@ -41,13 +41,15 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.txt_Name = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txt_Name = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txt_Unit = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -185,6 +187,8 @@
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.txt_Unit);
+            this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.panel8);
             this.panel3.Controls.Add(this.txt_Name);
             this.panel3.Controls.Add(this.label2);
@@ -219,34 +223,6 @@
             this.dataGridView2.Size = new System.Drawing.Size(642, 381);
             this.dataGridView2.TabIndex = 0;
             // 
-            // txt_Name
-            // 
-            this.txt_Name.Location = new System.Drawing.Point(101, 128);
-            this.txt_Name.Name = "txt_Name";
-            this.txt_Name.Size = new System.Drawing.Size(196, 20);
-            this.txt_Name.TabIndex = 62;
-            this.txt_Name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(349, 120);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(198, 30);
-            this.label2.TabIndex = 61;
-            this.label2.Text = "اسم التحليل";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1386, 34);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "اضافة و تعديل التحاليل";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // Column4
             // 
             this.Column4.HeaderText = "المسلسل";
@@ -266,7 +242,7 @@
             this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Column2.HeaderText = "معدل عند الذكر";
             this.Column2.Name = "Column2";
-            this.Column2.Width = 102;
+            this.Column2.Width = 74;
             // 
             // Column3
             // 
@@ -274,6 +250,52 @@
             this.Column3.HeaderText = "معدل عند الانثى";
             this.Column3.Name = "Column3";
             this.Column3.Width = 99;
+            // 
+            // txt_Name
+            // 
+            this.txt_Name.Location = new System.Drawing.Point(101, 91);
+            this.txt_Name.Name = "txt_Name";
+            this.txt_Name.Size = new System.Drawing.Size(196, 20);
+            this.txt_Name.TabIndex = 62;
+            this.txt_Name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(349, 83);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(198, 30);
+            this.label2.TabIndex = 61;
+            this.label2.Text = "اسم التحليل";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(1386, 34);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "اضافة و تعديل التحاليل";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txt_Unit
+            // 
+            this.txt_Unit.Location = new System.Drawing.Point(101, 127);
+            this.txt_Unit.Name = "txt_Unit";
+            this.txt_Unit.Size = new System.Drawing.Size(196, 20);
+            this.txt_Unit.TabIndex = 65;
+            this.txt_Unit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(349, 119);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(198, 30);
+            this.label3.TabIndex = 64;
+            this.label3.Text = "وحدة القياس";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Normals_Add_Form
             // 
@@ -322,5 +344,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.TextBox txt_Unit;
+        private System.Windows.Forms.Label label3;
     }
 }

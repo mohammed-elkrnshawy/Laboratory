@@ -90,11 +90,18 @@
     <Compile Include="Patient Company Packages\Patient Company Add Form.Designer.cs">
       <DependentUpon>Patient Company Add Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Patient Normal Class.cs" />
     <Compile Include="Patient Packages\Patient Add Form.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Patient Packages\Patient Add Form.Designer.cs">
       <DependentUpon>Patient Add Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Patient Packages\Patient Analysis Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patient Packages\Patient Analysis Form.Designer.cs">
+      <DependentUpon>Patient Analysis Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Shared Home Form.cs">
       <SubType>Form</SubType>
@@ -128,6 +135,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Patient Packages\Patient Add Form.resx">
       <DependentUpon>Patient Add Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patient Packages\Patient Analysis Form.resx">
+      <DependentUpon>Patient Analysis Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Shared Home Form.resx">
       <DependentUpon>Shared Home Form.cs</DependentUpon>
